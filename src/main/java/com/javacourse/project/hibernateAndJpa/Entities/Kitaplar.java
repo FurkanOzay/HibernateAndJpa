@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Table(name="kitaplar")
 public class Kitaplar {
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id",columnDefinition = "serial")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private int id;
 	@Column(name="kitap_adi")
 	private String kitap_adi;
