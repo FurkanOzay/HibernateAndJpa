@@ -1,4 +1,4 @@
-package com.javacourse.project.hibernateAndJpa.restApi;
+package com.javacourse.project.hibernateAndJpa.Controller;
 
 import java.util.List;
 
@@ -31,6 +31,8 @@ public class KitaplarController {
 	public void add(@RequestBody Kitaplar kitap){
 		kitaplarService.add(kitap);
 	}
+
+
 
 	@PutMapping("/update")
 	public void update(@RequestBody Kitaplar kitap){

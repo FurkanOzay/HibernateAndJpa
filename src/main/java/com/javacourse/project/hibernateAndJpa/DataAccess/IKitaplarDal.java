@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.javacourse.project.hibernateAndJpa.Entities.Kitaplar;
 
+
 public interface IKitaplarDal {
 	List<Kitaplar> getAll();
 	void add(Kitaplar kitap);

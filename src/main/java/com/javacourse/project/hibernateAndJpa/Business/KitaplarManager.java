@@ -13,7 +13,10 @@ import com.javacourse.project.hibernateAndJpa.Entities.Kitaplar;
 @Service
 public class KitaplarManager implements IKitaplarService{
 
-	
+	public void Kitaplar(){
+
+	}
+
 	private IKitaplarDal kitaplarDal;
 	
 	@Autowired
