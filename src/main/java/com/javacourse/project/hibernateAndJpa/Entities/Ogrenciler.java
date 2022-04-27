@@ -20,17 +20,20 @@ public class Ogrenciler {
     private String ogr_bolum;
     @Column(name="ogr_sinif")
     private int ogr_sinif;
+    @Column(name="kitap_sayisi")
+    private int kitap_sayisi;
 
 
 
 
-    public Ogrenciler(int ogr_id, int ogr_no, String ogr_ad_soyad, String ogr_bolum, int ogr_sinif) {
+    public Ogrenciler(int ogr_id, int ogr_no, String ogr_ad_soyad, String ogr_bolum, int ogr_sinif, int kitap_sayisi) {
         super();
         this.ogr_id = ogr_id;
         this.ogr_no = ogr_no;
         this.ogr_ad_soyad = ogr_ad_soyad;
         this.ogr_bolum = ogr_bolum;
         this.ogr_sinif = ogr_sinif;
+        this.kitap_sayisi = kitap_sayisi;
     }
 
     public Ogrenciler() {
@@ -75,5 +78,13 @@ public class Ogrenciler {
 
     public void setOgr_sinif(int ogr_sinif) {
         this.ogr_sinif = ogr_sinif;
+    }
+
+    public void setKitap_sayisi(int kitap_sayisi) {
+        this.kitap_sayisi = kitap_sayisi;
+    }
+
+    public int getKitap_sayisi() {
+        return kitap_sayisi;
     }
 }

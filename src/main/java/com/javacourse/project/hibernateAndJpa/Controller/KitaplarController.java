@@ -29,10 +29,10 @@ public class KitaplarController {
 
 	@PostMapping("/add")
 	public void add(@RequestBody Kitaplar kitap){
+
+		kitap.setMevcut_kitap(kitap.getKitap_adeti());
 		kitaplarService.add(kitap);
 	}
-
-
 
 	@PutMapping("/update")
 	public void update(@RequestBody Kitaplar kitap){

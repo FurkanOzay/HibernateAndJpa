@@ -24,9 +24,12 @@ public class Kitaplar {
 	private int kitap_sayfa;
 	@Column(name="yazar")
 	private String yazar;
+	@Column(name="kitap_adeti")
+	private int kitap_adeti;
+	@Column(name="mevcut_kitap")
+	private int mevcut_kitap;
 	
-	
-	public Kitaplar(int id, String kitap_adi, String kitap_kategori,String kitap_aciklama, String kitap_resim_url, int kitap_sayfa, String yazar ) {
+	public Kitaplar(int id, String kitap_adi, String kitap_kategori,String kitap_aciklama, String kitap_resim_url, int kitap_sayfa, String yazar, int kitap_adeti, int mevcut_kitap ) {
 		super();
 		this.id = id;
 		this.kitap_adi = kitap_adi;
@@ -35,6 +38,8 @@ public class Kitaplar {
 		this.kitap_resim_url = kitap_resim_url;
 		this.kitap_sayfa = kitap_sayfa;
 		this.yazar = yazar;
+		this.kitap_adeti = kitap_adeti;
+		this.mevcut_kitap = mevcut_kitap;
 	}
 
 	public Kitaplar() {
@@ -102,9 +107,22 @@ public class Kitaplar {
 		return yazar;
 	}
 
+	public void setKitap_adeti(int kitap_adeti) {
+		this.kitap_adeti = kitap_adeti;
+	}
+
+	public int getKitap_adeti(){return kitap_adeti;}
 
 	public void setYazar(String yazar) {
 		this.yazar = yazar;
 	}
-	
+
+	public int getMevcut_kitap() {
+		return mevcut_kitap;
+	}
+	public void setMevcut_kitap(int mevcut_kitap) {
+		this.mevcut_kitap = mevcut_kitap;
+	}
+
+
 }
